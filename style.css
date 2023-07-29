@@ -1,0 +1,16 @@
+::selection {
+	background: transparent;
+}
+
+h4 {
+	font-size: 26px;
+	line-height: 1px;
+	font-family: 'Amatic SC', cursive !important;
+}
+
+body {
+	font-family: 'Indie Flower', cursive !important;
+  background: #FDE3A7; /* COLOR CAPE HONEY*/
+	margin: 0px;
+	padding: 0px;
+}

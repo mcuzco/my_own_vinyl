@@ -1,0 +1,116 @@
+<!doctype html>
+<head>
+    <title>Vinyl Player</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+        
+ /* Style for the "Play Lovely" button */
+#playLovelyButton {
+	font-family: 'Amatic SC', cursive;
+	font-size: 18px;
+	background-color: #FF7F50; /* CORAL */
+	color: #FFF; /* WHITE */
+	border: 2px solid #FFD3B5; /* PASTEL PINK */
+	border-radius: 4px;
+	padding: 8px 16px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	text-transform: uppercase;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  #playLovelyButton:hover {
+	background-color: #FFAC81; /* PASTEL ORANGE */
+	color: #FFF; /* WHITE */
+	transform: scale(1.05);
+  }/* ... (existing styles) ... */
+
+.play-button {
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	font-size: 24px;
+	background-color: #FF7F50; /* CORAL */
+	color: #FFF; /* WHITE */
+	border: 2px solid #FFD3B5; /* PASTEL PINK */
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	text-transform: uppercase;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+        #container {
+            position: absolute;
+            z-index: -10;
+            width: 1024px;
+            height: 768px;
+            left: 50%;
+            margin-left: -512px;
+            top: 50%;
+            margin-top: -385px;
+        }
+        #disc {
+            position: absolute;
+            z-index: 0;
+            left: 141px;
+            top: 81px;
+            -webkit-animation-name: rotate; 
+            -webkit-animation-duration: 10s; 
+            -webkit-animation-iteration-count: infinite;
+            -webkit-animation-timing-function: linear;
+            -moz-animation-name: rotate; 
+            -moz-animation-duration: 10s; 
+            -moz-animation-iteration-count: infinite;
+            -moz-animation-timing-function: linear;
+            animation-name: rotate; 
+            animation-duration: 10s; 
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        @-webkit-keyframes rotate {
+            from {-webkit-transform: rotate(0deg);}
+            to {-webkit-transform: rotate(360deg);}
+        }
+        @-moz-keyframes rotate {
+            from {-moz-transform: rotate(0deg);}
+            to {-moz-transform: rotate(360deg);}
+        }
+        @keyframes rotate {
+            from {transform: rotate(0deg);}
+            to {transform: rotate(360deg);}
+        }
+        #overlay {
+            position: absolute;
+            z-index: 10;
+            top: 0px;
+            left: 0px;
+        }
+    </style>
+</head>
+<body>
+    <tittle>FELIZ CUM</tittle>
+    <div id="container">
+        <img src="player.png" id="player" />
+        <img src="dun cum.png" id="disc" />
+        <img src="overlay.png" id="overlay" />
+    </div>
+        <!-- Lovely button here -->
+        <div class="turntable">
+            <div class="vinyl">
+              <div class="spinning-disc"></div>
+              
+            </div>
+            <div class="stylus"></div>
+          </div>
+          <button id="playLovelyButton" class="play-button">&#9658;</button>
+        <audio id="lovelyAudio" src="lovely.mp3"></audio>
+      
+        <script src="script.js"></script>
+</body>
